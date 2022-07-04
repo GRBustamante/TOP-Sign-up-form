@@ -1,0 +1,152 @@
+:root {
+    --create-account-button: #596d48;
+    --input-border: #E5E7Eb;
+    --trans-background: calc(black);
+    --off-white: rgb(240, 240, 240);
+}
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: odin;
+    src: url(Norse-Bold.otf);
+}
+body {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--off-white);
+}
+#leftSide {
+    background-image: url(background.avif);
+    background-size:100vh;
+    height: 100vh;
+    max-width: 70vh;
+    min-width: 70vh;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: 140%;
+}
+.logoBox {
+    margin-top: 30%;
+    width: 100%;
+    display: flex;
+    background-color: rgb(2, 2, 2, 0.6);
+    align-items: center;
+    justify-content: center;
+    height: 16vh;
+    font-size: 5rem;
+    font-family: odin;
+}
+#logo{
+    max-height: 90%;
+}
+main {
+    height: 100%;
+    width: 100%;
+}
+section {
+    padding-top: 60px;
+    word-wrap: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 3px solid green; */
+    height: 35vh;
+    font-size: .9rem;
+}
+#form-container {
+    /* border: 3px solid red; */
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    align-content: center;
+    box-shadow: 0px 3px 5px -2px  #888888;   
+    padding-top: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+.bottom {
+    margin-top: 35px;
+}
+#createButton {
+    display: flex;
+    justify-content: center;
+    background-color: var(--create-account-button);
+    border: 7px solid var(--create-account-button);
+    border-radius: 6px;
+    color: white;
+    font-size: 1.3rem;
+    width: 190px;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+#createButton:hover {
+    transition: 200ms;
+    transform: scale(1.05);
+}
+#createButton::after {
+    background-color: white;
+    border-color: white;
+    color: black;
+}
+section, #form-container, .bottom {
+    padding-left: 30px;
+}
+label {
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 3px;
+    font-weight: bold;
+}
+fieldset {
+    display: flex;
+    border: none;
+    gap: 3rem;
+    margin: 0px;
+    padding: 0px;
+}
+.cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+input {
+    padding: 3px;
+    border: 2px solid var(--input-border);
+    border-radius: 2px;
+    background-color: rgb(245, 245, 245);
+}
+input:focus {
+    outline: none;
+    border: 2px solid cornflowerblue;
+    box-shadow: 2px 2px 8px 0px hsl(0, 0%, 70%);
+}
+#log-in {
+    color: var(--create-account-button);
+    cursor: pointer;
+}
+h1 {
+    word-wrap: break-word;
+}
+input:invalid:focus {
+    border: 2px solid red;
+}
